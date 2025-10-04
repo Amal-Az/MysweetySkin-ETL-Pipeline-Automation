@@ -1,0 +1,66 @@
+
+--- Scraping collection: Huile Parfumée -> https://mysweetyskin.ma/collections/huile-parfumee
+Page 1: 21 éléments trouvés
+Page 2: 21 éléments trouvés
+Page 3: 21 éléments trouvés
+Page 4: 21 éléments trouvés
+Page 5: 21 éléments trouvés
+Page 6: 21 éléments trouvés
+Page 7: 21 éléments trouvés
+Page 8: 15 éléments trouvés
+Fin de la pagination pour cette collection.
+Collection 'Huile Parfumée' -> 162 produits extraits.
+
+--- Scraping collection: Mikhmariyat -> https://mysweetyskin.ma/collections/mikhmariyat
+Page 1: 21 éléments trouvés
+Page 2: 21 éléments trouvés
+Page 3: 21 éléments trouvés
+Page 4: 21 éléments trouvés
+Page 5: 21 éléments trouvés
+Page 6: 21 éléments trouvés
+Page 7: 21 éléments trouvés
+Page 8: 19 éléments trouvés
+Fin de la pagination pour cette collection.
+Collection 'Mikhmariyat' -> 166 produits extraits.
+
+--- Scraping collection: Musc Tahara -> https://mysweetyskin.ma/collections/musc-tahara
+Page 1: 16 éléments trouvés
+Fin de la pagination pour cette collection.
+Collection 'Musc Tahara' -> 16 produits extraits.
+Traceback (most recent call last):
+  File "C:\Users\ThinkPad\Documents\scraping-myskin\main.py", line 273, in <module>
+    main()
+  File "C:\Users\ThinkPad\Documents\scraping-myskin\main.py", line 268, in main
+    df.to_csv(OUTPUT_CSV, index=False, encoding="utf-8-sig")
+  File "C:\Users\ThinkPad\Documents\scraping-myskin\venv\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\scraping-myskin\venv\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\scraping-myskin\venv\Lib\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "C:\Users\ThinkPad\Documents\scraping-myskin\venv\Lib\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\scraping-myskin\venv\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: 'data/raw_products.csv'
+[INFO] 2025-10-04 02:19:17.439471 - DÃ©but de l'exÃ©cution de main.py
+[ERROR] 2025-10-04 03:01:37.520426 - main.py a Ã©chouÃ© avec le code 1
+Données brutes: 344 lignes, 6 colonnes
+ Doublons supprimés: 215
+ 3 lignes avec prix manquant :
+    title      collection                                            link
+9     NaN  Huile Parfumée  https://mysweetyskin.ma/products/musc-al-roman
+171   NaN     Mikhmariyat  https://mysweetyskin.ma/products/musc-al-roman
+332   NaN     Musc Tahara  https://mysweetyskin.ma/products/musc-al-roman
+ Produits supprimés car 'Inconnu': 3
+ Nettoyage terminé. 126 produits sauvegardés dans data/clean_products.csv
+[INFO] 2025-10-04 03:01:37.526409 - DÃ©but de l'exÃ©cution de clean_products.py
+[INFO] 2025-10-04 03:01:38.998180 - clean_products.py terminÃ© avec succÃ¨s 
+ Données à insérer : 126 lignes, 6 colonnes
+ Insertion terminée ! Les données sont maintenant dans PostgreSQL.
+[INFO] 2025-10-04 03:01:39.006160 - DÃ©but de l'exÃ©cution de load_to_postgres.py
+[INFO] 2025-10-04 03:01:41.280868 - load_to_postgres.py terminÃ© avec succÃ¨s 
