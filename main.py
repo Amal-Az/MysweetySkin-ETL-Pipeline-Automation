@@ -1,15 +1,3 @@
-"""
-scraping-skin/main.py
-Script Selenium pour extraire :
-- collection (nom)
-- product_name
-- price_text (ex: "98.00 Dhs")
-- price_value (float: 98.0)  # tentative d'extraction numérique
-- availability ("Vente" / "Épuisé" / "Inconnu")
-- link (url produit)
-
-Résultat -> data/raw_products.csv
-"""
 import time
 import re
 import json

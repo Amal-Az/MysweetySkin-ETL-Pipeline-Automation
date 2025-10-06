@@ -1,8 +1,3 @@
-"""
-clean_products.py
-Nettoyage des données extraites depuis raw_products.csv
-"""
-
 import pandas as pd
 import os
 from datetime import datetime
